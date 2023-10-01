@@ -1,0 +1,15 @@
+D:\Milan Programiranje\.Net\Microservices\Product\Application\bin\Debug\net6.0\Application.deps.json
+D:\Milan Programiranje\.Net\Microservices\Product\Application\bin\Debug\net6.0\Application.dll
+D:\Milan Programiranje\.Net\Microservices\Product\Application\bin\Debug\net6.0\Application.pdb
+D:\Milan Programiranje\.Net\Microservices\Product\Application\bin\Debug\net6.0\Domain.dll
+D:\Milan Programiranje\.Net\Microservices\Product\Application\bin\Debug\net6.0\Domain.pdb
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.dll
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\refint\Application.dll
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\Application.pdb
+D:\Milan Programiranje\.Net\Microservices\Product\Application\obj\Debug\net6.0\ref\Application.dll
