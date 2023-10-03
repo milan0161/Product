@@ -7,12 +7,12 @@ namespace MinimalAPI.Middleware
     public sealed class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger _logger;
+        //private readonly ILogger _logger;
 
-        public ExceptionMiddleware(RequestDelegate next, ILogger logger)
+        public ExceptionMiddleware(RequestDelegate next)
         {
             this._next = next;
-            this._logger = logger;
+            //this._logger = logger;
         }
 
         public async Task InvokeAsync(HttpContext context)
@@ -23,7 +23,7 @@ namespace MinimalAPI.Middleware
             }
             catch (Exception e)
             {
-                _logger.LogError(e, e.Message);
+               // _logger.LogError(e, e.Message);
                 await GenerateExceptionResponse(e, context, (int)HttpStatusCode.InternalServerError);
             }
         }
