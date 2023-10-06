@@ -1,4 +1,5 @@
 ﻿
+using Application.Exceptions;
 using Application.Interfaces;
 using MediatR;
 
@@ -20,7 +21,8 @@ namespace Application.Features.Commands.CreateProduct
 
             if (perfume is null) 
             {
-                throw new Exception($"Perfume with id {request.Product.PerfumeId} doesn't exist");
+                throw new NotFoundEntityException($"Perfume with id {request.Product.PerfumeId} doesn't exist");
+                
             }
 
             var product = request.Product.ToProduct();

@@ -1,4 +1,7 @@
-﻿using MinimalAPI.Models;
+﻿
+using Application.Exceptions;
+using MinimalAPI.Models;
+using FluentValidation;
 using System.Net;
 using System.Text.Json;
 
@@ -20,6 +23,25 @@ namespace MinimalAPI.Middleware
             try
             {
                 await _next(context);
+            }
+            catch (ValidationException e)
+            {
+                var validationErrors = e.Errors
+                    .Where(x => x != null)
+                    .GroupBy(
+                        x => x.PropertyName,
+                        x => x.ErrorMessage,
+                        (propertyName, errorMessage) => new
+                        {
+                            Key = propertyName,
+                            Values = errorMessage.Distinct().ToArray()
+
+                        }).ToDictionary(x => x.Key, x => x.Values);
+                await GenerateExceptionResponse(e, context, (int)HttpStatusCode.UnprocessableEntity, validationErrors);
+            }
+            catch (NotFoundEntityException e)
+            {
+                await GenerateExceptionResponse(e, context, (int)HttpStatusCode.NotFound);
             }
             catch (Exception e)
             {
